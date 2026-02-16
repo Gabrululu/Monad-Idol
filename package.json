@@ -1,0 +1,22 @@
+{
+    "name": "monad-idol",
+    "version": "1.0.0",
+    "description": "AI-powered talent discovery and micro-funding platform for Monad Blockchain",
+    "private": true,
+    "packageManager": "pnpm@9.0.0",
+    "scripts": {
+        "ai-agent": "pnpm --filter ai-agent start",
+        "frontend": "pnpm --filter frontend dev",
+        "build:frontend": "pnpm --filter frontend build",
+        "install:all": "pnpm install"
+    },
+    "keywords": [
+        "monad",
+        "blockchain",
+        "ai",
+        "funding",
+        "hackathon"
+    ],
+    "author": "",
+    "license": "MIT"
+}

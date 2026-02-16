@@ -1,0 +1,54 @@
+/* Mascot styling */
+.mascot-container {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 50;
+    animation: float 3s ease-in-out infinite;
+}
+
+.mascot-image {
+    width: 120px;
+    height: 120px;
+    filter: drop-shadow(0 10px 30px rgba(130, 71, 229, 0.4));
+    transition: transform 0.3s ease;
+}
+
+.mascot-image:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.mascot-tooltip {
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    margin-bottom: 1rem;
+    background: var(--monad-card-bg);
+    border: 1px solid var(--monad-border);
+    border-radius: 1rem;
+    padding: 0.75rem 1rem;
+    color: white;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.mascot-container:hover .mascot-tooltip {
+    opacity: 1;
+}
+
+/* Speech bubble arrow */
+.mascot-tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    right: 20px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid var(--monad-card-bg);
+}

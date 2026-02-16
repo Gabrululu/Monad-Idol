@@ -1,0 +1,74 @@
+/* Custom Reown AppKit Styles - Force Monad Purple */
+
+/* Global CSS variables that Reown uses */
+:root {
+    --w3m-accent: #8247E5 !important;
+    --w3m-color-mix: #8247E5 !important;
+    --wui-color-accent-100: #8247E5 !important;
+    --wui-color-accent-090: #8247E5 !important;
+    --wui-color-accent-080: #8247E5 !important;
+}
+
+/* Target all Reown components */
+appkit-button,
+appkit-button *,
+w3m-button,
+w3m-button *,
+w3m-connect-button,
+w3m-connect-button *,
+w3m-account-button,
+w3m-account-button * {
+    --w3m-accent: #8247E5 !important;
+    --w3m-color-mix: #8247E5 !important;
+}
+
+/* Direct button styling */
+appkit-button button,
+w3m-button button,
+w3m-connect-button button,
+w3m-account-button button {
+    background: linear-gradient(135deg, #8247E5 0%, #6B21A8 100%) !important;
+    border-color: #8247E5 !important;
+    color: white !important;
+}
+
+appkit-button button:hover,
+w3m-button button:hover,
+w3m-connect-button button:hover,
+w3m-account-button button:hover {
+    background: linear-gradient(135deg, #9B5FF9 0%, #8247E5 100%) !important;
+    box-shadow: 0 4px 20px rgba(130, 71, 229, 0.5) !important;
+}
+
+/* Ensure header is always visible */
+header {
+    position: relative;
+    z-index: 100;
+}
+
+header .btn-primary {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+}
+
+/* Ensure dark backgrounds */
+.glass {
+    background: rgba(17, 24, 39, 0.7) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+/* Better text contrast */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: white !important;
+}
+
+p {
+    color: rgb(209, 213, 219) !important;
+}

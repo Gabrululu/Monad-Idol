@@ -1,0 +1,15 @@
+{
+    "name": "monad-idol-ai-agent",
+    "version": "1.0.0",
+    "description": "AI agent for evaluating Monad Idol projects",
+    "main": "agent.js",
+    "scripts": {
+        "start": "node agent.js listen",
+        "listen": "node agent.js listen",
+        "evaluate": "node agent.js evaluate-all"
+    },
+    "dependencies": {
+        "ethers": "^6.10.0",
+        "dotenv": "^16.4.1"
+    }
+}

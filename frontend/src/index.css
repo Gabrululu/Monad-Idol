@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Monad Title Styling */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;900&display=swap');
+
+.monad-title {
+  font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg,
+      #C084FC 0%,
+      #8247E5 25%,
+      #A78BFA 50%,
+      #8247E5 75%,
+      #C084FC 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 4s ease infinite;
+  text-shadow:
+    0 0 40px rgba(130, 71, 229, 0.5),
+    0 0 80px rgba(130, 71, 229, 0.3),
+    0 0 120px rgba(130, 71, 229, 0.2);
+  filter: drop-shadow(0 0 30px rgba(130, 71, 229, 0.6));
+  position: relative;
+  display: inline-block;
+}
+
+@keyframes gradient-shift {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.monad-title::before {
+  content: 'MONAD IDOL';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #8247E5 0%, #C084FC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: blur(20px);
+  opacity: 0.5;
+  z-index: -1;
+}
+
+/* Responsive font sizes */
+@media (max-width: 768px) {
+  .monad-title {
+    font-size: 3.5rem !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .monad-title {
+    font-size: 2.5rem !important;
+  }
+}
+
+:root {
+  /* Monad Official Brand Colors */
+  --monad-purple: #8247E5;
+  --monad-dark-bg: #0A0A0F;
+  --monad-card-bg: #1A1A24;
+  --monad-border: rgba(130, 71, 229, 0.2);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--monad-dark-bg);
+  color: #FFFFFF;
+  min-height: 100vh;
+}
+
+@layer components {
+
+  /* Glass Effect */
+  .glass {
+    background: var(--monad-card-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--monad-border);
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Primary Button */
+  .btn-primary {
+    background: linear-gradient(135deg, var(--monad-purple) 0%, #6B21A8 100%);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(130, 71, 229, 0.3);
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 30px rgba(130, 71, 229, 0.5);
+  }
+
+  .btn-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .btn-secondary {
+    @apply glass px-6 py-3 rounded-xl font-semibold hover:bg-white/20 transition-all duration-200;
+  }
+
+  .card {
+    @apply glass p-6 hover:border-monad-purple/50 transition-all duration-300;
+  }
+
+  .input-field {
+    @apply glass px-4 py-3 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-monad-purple placeholder-gray-400 text-white;
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    background: linear-gradient(135deg, var(--monad-purple) 0%, #C084FC 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Animations */
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--monad-dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--monad-purple);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6B21A8;
+}

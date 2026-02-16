@@ -1,0 +1,33 @@
+node_modules
+.env
+coverage
+coverage.json
+
+# Foundry files
+cache/
+out/
+lib/
+broadcast/
+
+# pnpm
+pnpm-lock.yaml
+.pnpm-store/
+
+# Frontend
+frontend/node_modules
+frontend/dist
+frontend/.env
+
+# AI Agent
+ai-agent/node_modules
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
