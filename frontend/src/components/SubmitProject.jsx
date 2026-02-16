@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import toastUtil from '../utils/toast';
+import toastUtil from '../utils/toast.jsx';
 import Spinner from './Loading/Spinner';
 import { trackProjectSubmit } from '../utils/analytics';
 

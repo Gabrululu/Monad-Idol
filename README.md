@@ -99,4 +99,4 @@ pnpm frontend
 
 MIT
 
-## 🤝 Built for Monad Hackathon 2026
+## 🤝 Built for Moltiverse by Nadfun & Monad

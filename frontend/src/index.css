@@ -1,9 +1,9 @@
+/* Monad Title Styling - Import must be first */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Monad Title Styling */
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700;900&display=swap');
 
 .monad-title {
   font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;

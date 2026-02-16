@@ -5,7 +5,7 @@ import { Toaster } from 'react-hot-toast';
 import { Analytics } from '@vercel/analytics/react';
 import { CONTRACTS, TOKEN_ABI, REGISTRY_ABI, FUNDING_POOL_ABI } from './config';
 import { useGSAPAnimations } from './hooks/useGSAPAnimations';
-import toastUtil from './utils/toast';
+import toastUtil from './utils/toast.jsx';
 import { trackWalletConnect } from './utils/analytics';
 import './config/reown';
 import './reown-custom.css';
